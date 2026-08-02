@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditi Verma · Digital Identity Card</title>
+<meta name="description" content="Virtual business card for Aditi Verma, Frontend Developer & UI Engineer.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+
+<main class="card" role="main" aria-label="Virtual business card for Aditi Verma">
+
+  <span class="status-chip"><span class="status-dot"></span> Available for freelance</span>
+
+  <div class="avatar-wrap">
+    <div class="avatar-ring" aria-hidden="true"></div>
+    <div class="avatar" role="img" aria-label="Profile initials AV">AV</div>
+  </div>
+
+  <h1 class="name">Aditi Verma</h1>
+  <p class="role">Frontend Developer · UI Engineer</p>
+  <p class="tagline">I turn interfaces into something people enjoy using — clean code, quiet animation, no wasted pixels.</p>
+
+  <div class="divider"><span>Reach Me</span></div>
+
+  <div class="contact-row">
+    <button class="contact-pill" data-copy="aditi.verma@example.com" aria-label="Copy email address">
+      <i class="fa-solid fa-envelope"></i> aditi.verma@example.com
+      <span class="copy-hint">tap to copy</span>
+    </button>
+    <button class="contact-pill" data-copy="+91 98765 43210" aria-label="Copy phone number">
+      <i class="fa-solid fa-phone"></i> +91 98765 43210
+      <span class="copy-hint">tap to copy</span>
+    </button>
+  </div>
+
+  <div class="divider"><span>Connect</span></div>
+
+  <nav class="trace-row" aria-label="Social links">
+    <span class="trace-pulse" aria-hidden="true"></span>
+    <a class="node" href="https://github.com/" target="_blank" rel="noopener" data-tip="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a class="node" href="https://linkedin.com/" target="_blank" rel="noopener" data-tip="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a class="node" href="https://x.com/" target="_blank" rel="noopener" data-tip="X / Twitter" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+    <a class="node" href="https://dribbble.com/" target="_blank" rel="noopener" data-tip="Portfolio" aria-label="Portfolio"><i class="fa-solid fa-globe"></i></a>
+  </nav>
+
+  <button class="qr-toggle" id="qrToggle" aria-expanded="false" aria-controls="qrPanel">Show QR Code</button>
+  <div class="qr-panel" id="qrPanel">
+    <div class="qr-inner">
+      <div id="qrcode"></div>
+    </div>
+    <p class="qr-caption">Scan to open this card on another device</p>
+  </div>
+
+  <footer class="card-footer">© 2026 Aditi Verma — Built as a digital identity card</footer>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Copied to clipboard</div>
+
+<!-- QR library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- App logic -->
+<script src="script.js"></script>
+
+</body>
+</html>
